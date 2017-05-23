@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 if [ -a ~/.vimrc ]
     then
@@ -10,5 +10,8 @@ if [ -d ~/.vim ]
     mv -f  ~/.vim ~/.vim.bak
 fi
 
-link -s vimrc ~/.vimrc
-link -s vim ~/.vim
+rm -rf ~/.vim
+rm -rf ~/.vimrc
+
+ln -s $(pwd)/vimrc ~/.vimrc
+ln -s $(pwd)/vim ~/.vim
