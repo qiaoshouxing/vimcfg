@@ -2,11 +2,11 @@
 "autocmd {{         增加自动执行配置命令
 
 "auto chmod {       .py .sh 自动增加执行权限
-au BufWritePost * if getline(1) =~ "^#!" | silent !chmod a+x <afile> 
+au BufWritePost * if getline(1) =~ "^#!" | silent !chmod a+x <afile>
 "}
 "
 
-"}}    
+"}}
 
 "============================= make =======================================
 "make conf {        vim 内置命令make 配置修改
@@ -20,7 +20,7 @@ au BufWritePost * if getline(1) =~ "^#!" | silent !chmod a+x <afile>
 
 
 "================================ config =================================
-syn on                     
+syn on
 "common conf {{             通用配置
     set ai                      "自动缩进
     set bs=2                    "在insert模式下用退格键删除
@@ -39,7 +39,7 @@ syn on
     set hls                     "检索时高亮显示匹配项
     set helplang=cn             "帮助系统设置为中文
     "set foldmethod=syntax       "代码折叠
-    "colorscheme 256-jungle 
+    "colorscheme 256-jungle
 
 "}}
 
@@ -122,7 +122,7 @@ filetype plugin indent on    " required
 
 "conf for plugins {{ 插件相关的配置
 
-"状态栏的配置 
+"状态栏的配置
 "powerline{
     set guifont=PowerlineSymbols\ for\ Powerline
     set nocompatible
@@ -141,7 +141,7 @@ filetype plugin indent on    " required
 
 "
 "Tagbar{
-    nnoremap <leader>tb : Tagbar<CR> 
+    nnoremap <leader>tb : Tagbar<CR>
 "}
 "OmniCppComplete {
     set nocp
@@ -155,7 +155,7 @@ function AddFileHead()
     call append(1, "           Copyright (C), 2014-2015,  Co., Ltd.")
     call append(2, " FileName    : ".expand("%:t"))
     call append(3, " Author      : alexander")
-    call append(4, " Data        : ".strftime("%Y-%m-%d %H:%M"))
+    call append(4, " Date        : ".strftime("%Y-%m-%d %H:%M"))
     call append(5, " Description :")
     echohl WarningMsg | echo "Successful in adding the copyrigh." | echohl None
     call append(6, "*******************************************************************************/")
@@ -176,12 +176,12 @@ function AddFuncHead()
     call append(start + 3, " Output        : ")
     call append(start + 4, " Return        : ")
     call append(start + 5, " Author        : alexander")
-    call append(start + 6, " Data          : ".strftime("%Y-%m-%d"))
-    call append(start + 7, " Description   : ") 
+    call append(start + 6, " Date          : ".strftime("%Y-%m-%d"))
+    call append(start + 7, " Description   : ")
     call append(start + 8, "*******************************************************************************/")
     echohl WarningMsg | echo "Successful in adding the comment" | echohl None
 endfunction
-map <F4> : call AddFileHead()<cr> 
+map <F4> : call AddFileHead()<cr>
 map <F5> : call AddFuncHead()<cr>
 "}
 
