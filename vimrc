@@ -83,6 +83,7 @@ Plugin 'Lokaltog/vim-powerline'
 Plugin 'qiaoshouxing/cscope_maps'
 Plugin 'isnowfy/python-vim-instant-markdown'
 Plugin 'scrooloose/nerdtree'
+Plugin 'dawikur/trimWhitespaces.vim'
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'nerdtree-ack'
 Plugin 'tagbar'
