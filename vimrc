@@ -57,8 +57,16 @@ let mapleader = ','
     nnoremap <C-l> <C-w>l
     nnoremap <C-h> <C-w>h
 
-nnoremap <leader>t : tabe<CR>
-nnoremap <leader>tn : tabn<CR>
+    nnoremap <leader>t : tabe<CR>
+    nnoremap <leader>n : tabn<CR>
+"Bind nohl,Removes highlight of my last search
+    noremap <C-n> :nohl<CR>
+    vnoremap <C-n> :nohl<CR>
+    inoremap <C-n> :nohl<CR>
+"easier moving of code blocks
+    vnoremap < <gv
+    vnoremap > >gv
+
 
 "================================插件====================================
 "
