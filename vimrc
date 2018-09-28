@@ -40,6 +40,9 @@ syn on
     set helplang=cn             "帮助系统设置为中文
     "set foldmethod=syntax       "代码折叠
     "colorscheme 256-jungle
+    set nobackup                "关闭备份文件
+    set noswapfile
+    set nowritebackup
 
 "}}
 
