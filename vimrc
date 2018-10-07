@@ -44,6 +44,8 @@ syn on
     set noswapfile
     set nowritebackup
 
+    set path+=**                "增加find查找路径
+    set wildmenu                "dispaly all matching files when we tab complete
 "}}
 
 if has("gui_macvim")
