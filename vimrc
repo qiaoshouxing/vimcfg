@@ -3,6 +3,7 @@
 
 "auto chmod {       .py .sh 自动增加执行权限
 au BufWritePost * if getline(1) =~ "^#!" | silent !chmod a+x <afile>
+au BufWritePost .vimrc source %
 "}
 "
 
