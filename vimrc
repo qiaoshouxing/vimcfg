@@ -40,7 +40,7 @@ syn on
     set hls                     "检索时高亮显示匹配项
     set helplang=cn             "帮助系统设置为中文
     "set foldmethod=syntax       "代码折叠
-    "colorscheme 256-jungle
+    colorscheme solarized
     set nobackup                "关闭备份文件
     set noswapfile
     set nowritebackup
@@ -57,7 +57,7 @@ endif
 "================================ map ===================================
 let mapleader = ','
 "设置生成ctag索引
-    map <F7> :!/usr/local/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q <CR>
+    map <F7> :!/usr/local/bin/ctags -R -f ./.git/tags .<CR>
     map <F8> :!cscope -bRq <CR>
 "conf for tabs, 为标签页进行的配置，通过ctrl h/l切换窗口,用,t创建新标签等
     nnoremap <C-l> <C-w>l
@@ -101,7 +101,8 @@ Plugin 'Lokaltog/vim-powerline'
 Plugin 'qiaoshouxing/cscope_maps'
 Plugin 'isnowfy/python-vim-instant-markdown'
 Plugin 'scrooloose/nerdtree'
-Plugin 'dawikur/trimWhitespaces.vim'
+Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'kendling/taghighlight'
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'nerdtree-ack'
 Plugin 'tagbar'
@@ -164,6 +165,10 @@ filetype plugin indent on    " required
 "OmniCppComplete {
     set nocp
     filetype plugin on
+"}
+"
+"TagHighlight{
+    call pathogen#helptags()
 "}
 
 
